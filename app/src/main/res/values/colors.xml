@@ -6,4 +6,6 @@
 
     <color name="colorIcons">#757575</color>
     <color name="primaryText">#000000</color>
+
+    <color name="colorRipple">#80f9a729</color>
 </resources>

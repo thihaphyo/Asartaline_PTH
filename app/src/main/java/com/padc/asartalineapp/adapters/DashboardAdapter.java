@@ -10,6 +10,7 @@ import com.padc.asartalineapp.R;
 import com.padc.asartalineapp.viewholders.BaseDashboardViewHolder;
 import com.padc.asartalineapp.viewholders.FoodCategoryViewHolder;
 import com.padc.asartalineapp.viewholders.SerachBannerViewHolder;
+import com.padc.asartalineapp.viewholders.WarteeViewHolder;
 
 /**
  * Created by Phyo Thiha on 7/2/18.
@@ -19,7 +20,6 @@ public class DashboardAdapter extends RecyclerView.Adapter<BaseDashboardViewHold
     private final int BANNER_VIEW = 1;
     private final int FOOD_CAT_OFFER_VIEW = 2;
     private final int RESTURANT_CARD_VIEW = 3;
-    private final int EXCEPTIONAL_VIEW = -1;
 
     @NonNull
     @Override
@@ -33,9 +33,8 @@ public class DashboardAdapter extends RecyclerView.Adapter<BaseDashboardViewHold
                 View categoryVirew = inflater.inflate(R.layout.view_holder_food_cat,parent,false);
                 return new FoodCategoryViewHolder(categoryVirew);
             case RESTURANT_CARD_VIEW:
-                break;
-            case EXCEPTIONAL_VIEW:
-                return null;
+                View warTeeView = inflater.inflate(R.layout.view_holder_war_tee,parent,false);
+                return new WarteeViewHolder(warTeeView);
         }
         return null;
 
@@ -48,7 +47,7 @@ public class DashboardAdapter extends RecyclerView.Adapter<BaseDashboardViewHold
 
     @Override
     public int getItemCount() {
-        return 2;
+        return 17;
     }
 
     @Override
@@ -58,10 +57,8 @@ public class DashboardAdapter extends RecyclerView.Adapter<BaseDashboardViewHold
                 return BANNER_VIEW;
             case 1:
                 return FOOD_CAT_OFFER_VIEW;
-            case 2:
-                return RESTURANT_CARD_VIEW;
             default:
-                return EXCEPTIONAL_VIEW;
+                return RESTURANT_CARD_VIEW;
         }
     }
 }

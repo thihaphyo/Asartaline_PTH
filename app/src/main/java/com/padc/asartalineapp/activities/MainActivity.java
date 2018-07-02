@@ -38,7 +38,7 @@ public class MainActivity extends BaseActivity {
         rvAsarTaline.setLayoutManager(new LinearLayoutManager(getApplicationContext(),LinearLayoutManager.VERTICAL,false));
         rvAsarTaline.setAdapter(mAdapter);
 
-    }
 
+    }
 
 }
