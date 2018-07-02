@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/margin_large">
+
+    <LinearLayout
+        android:id="@+id/ll_icons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="@dimen/margin_medium"
+        android:weightSum="4">
+
+        <ImageView
+            android:id="@+id/btn_chinese_food"
+            style="@style/AppTheme.FoodCategoryIcons"
+            android:layout_marginRight="@dimen/margin_large"
+            android:padding="@dimen/margin_medium_2"
+            android:src="@drawable/ic_noodles" />
+
+        <ImageView
+            android:id="@+id/btn_tacos"
+            style="@style/AppTheme.FoodCategoryIcons"
+            android:layout_marginRight="@dimen/margin_large"
+            android:padding="@dimen/margin_medium_2"
+            android:src="@drawable/ic_taco" />
+
+        <ImageView
+            android:id="@+id/btn_burger"
+            style="@style/AppTheme.FoodCategoryIcons"
+            android:layout_marginRight="@dimen/margin_large"
+            android:padding="@dimen/margin_medium_2"
+            android:src="@drawable/ic_burger" />
+
+        <ImageView
+            android:id="@+id/btn_donuts"
+            style="@style/AppTheme.FoodCategoryIcons"
+            android:layout_marginRight="@dimen/margin_large"
+            android:padding="@dimen/margin_medium_2"
+            android:src="@drawable/ic_noodles" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_icons_texts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_icons"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_marginLeft="@dimen/margin_medium"
+        android:weightSum="4">
+
+        <TextView
+            android:id="@+id/tv_chinese_food"
+            style="@style/AppTheme.FoodCategoryTextLabels"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:layout_marginRight="@dimen/margin_large"
+            android:layout_marginTop="@dimen/margin_small"
+            android:text="chinese" />
+
+
+        <TextView
+            android:id="@+id/tv_tacos_food"
+            style="@style/AppTheme.FoodCategoryTextLabels"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_large"
+            android:layout_marginTop="@dimen/margin_small"
+            android:paddingLeft="@dimen/margin_medium"
+            android:text="tacos" />
+
+
+        <TextView
+            android:id="@+id/tv_burger_food"
+            style="@style/AppTheme.FoodCategoryTextLabels"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_large"
+            android:layout_marginTop="@dimen/margin_small"
+            android:paddingLeft="@dimen/margin_medium"
+            android:text="Burger" />
+
+
+        <TextView
+            android:id="@+id/tv_donuts"
+            style="@style/AppTheme.FoodCategoryTextLabels"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_large"
+            android:layout_marginTop="@dimen/margin_small"
+            android:paddingLeft="@dimen/margin_medium"
+            android:text="donuts" />
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tv_offers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_icons_texts"
+        android:layout_marginLeft="@dimen/margin_medium"
+        android:layout_marginTop="@dimen/margin_large"
+        android:fontFamily="@font/popping_medium"
+        android:text="offers"
+        android:textAllCaps="true"
+        android:textColor="#757575"
+        android:paddingLeft="@dimen/margin_small"
+        android:textSize="@dimen/text_regular_2x" />
+
+
+</RelativeLayout>

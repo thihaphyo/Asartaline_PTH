@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 
 import com.padc.asartalineapp.R;
 import com.padc.asartalineapp.viewholders.BaseDashboardViewHolder;
+import com.padc.asartalineapp.viewholders.FoodCategoryViewHolder;
 import com.padc.asartalineapp.viewholders.SerachBannerViewHolder;
 
 /**
@@ -29,7 +30,8 @@ public class DashboardAdapter extends RecyclerView.Adapter<BaseDashboardViewHold
                 View view = inflater.inflate(R.layout.view_holder_search_banner,parent,false);
                 return new SerachBannerViewHolder(view);
             case FOOD_CAT_OFFER_VIEW:
-                break;
+                View categoryVirew = inflater.inflate(R.layout.view_holder_food_cat,parent,false);
+                return new FoodCategoryViewHolder(categoryVirew);
             case RESTURANT_CARD_VIEW:
                 break;
             case EXCEPTIONAL_VIEW:
@@ -46,7 +48,7 @@ public class DashboardAdapter extends RecyclerView.Adapter<BaseDashboardViewHold
 
     @Override
     public int getItemCount() {
-        return 1;
+        return 2;
     }
 
     @Override
