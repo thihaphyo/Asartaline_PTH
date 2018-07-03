@@ -1,5 +1,6 @@
 package com.padc.asartalineapp.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.v7.widget.LinearLayoutManager;
@@ -14,6 +15,7 @@ import com.padc.asartalineapp.data.vos.WarDeeVO;
 import com.padc.asartalineapp.delegates.DashboardDelegate;
 import com.padc.asartalineapp.events.ApiErrorEvent;
 import com.padc.asartalineapp.events.SuccessGetWarDeeEvent;
+import com.padc.asartalineapp.utils.AppConstants;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
@@ -80,6 +82,9 @@ public class MainActivity extends BaseActivity implements DashboardDelegate {
     @Override
     public void onTapWarTeeItem(WarDeeVO warDee) {
         Log.d("onTapWarTeeItem", warDee.getWarDeeId());
+        Intent intent = new Intent(getApplicationContext(),WarDeeDetailActivity.class);
+        intent.putExtra(AppConstants.WARDEE_ID,warDee.getWarDeeId());
+        startActivity(intent);
     }
 
     @Override

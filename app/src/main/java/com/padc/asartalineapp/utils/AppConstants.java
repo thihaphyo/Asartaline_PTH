@@ -14,4 +14,6 @@ public class AppConstants {
     public static final String BURGER_FOOD = "BURGER";
     public static final String DONUT_FOOD  = "DONUT";
 
+    public static final String WARDEE_ID = "WARDEEID";
+
 }
