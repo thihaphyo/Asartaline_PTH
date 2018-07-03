@@ -1,4 +1,5 @@
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name">အစားတလိုင္း</string>
     <string name="action_settings">Settings</string>
+    <string name="format_price_range">Cost <xliff:g id="min">%d</xliff:g>KS - <xliff:g id="max">%d</xliff:g>KS for one.</string>
 </resources>
