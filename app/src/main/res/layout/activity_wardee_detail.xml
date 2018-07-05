@@ -189,10 +189,10 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="5"
                     android:background="@color/colorPrimary"
-                    android:gravity="center"
-                    android:orientation="horizontal"
                     android:clickable="true"
-                    android:foreground="@drawable/ripple">
+                    android:foreground="@drawable/ripple"
+                    android:gravity="center"
+                    android:orientation="horizontal">
 
                     <Button
                         android:id="@+id/btn_add_to_cart"

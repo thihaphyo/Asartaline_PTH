@@ -6,4 +6,14 @@ package com.padc.asartalineapp.network;
 public interface AsarTalineDataAgent {
 
     void loadWarDee(String accessToken);
+
+    void searchWarDee(String accessToken
+            , String tasteType
+            , String suited
+            , int minPrice
+            , int maxPrice
+            , boolean isNearBy
+            , String currentTownship
+            , String currentLat
+            , String currentLng);
 }

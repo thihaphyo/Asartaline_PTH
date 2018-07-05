@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/margin_medium"
+    android:layout_marginRight="@dimen/margin_medium"
+    android:layout_marginTop="@dimen/margin_medium_2"
+    android:layout_marginBottom="@dimen/margin_medium"
+    android:elevation="@dimen/margin_medium_2"
+    android:clickable="true"
+    android:foreground="@drawable/ripple">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/rl_image_container"
+            android:layout_width="match_parent"
+            android:layout_height="187dp">
+
+            <ImageView
+                android:id="@+id/iv_wardee_hero"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/placeholder_tea" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/gradient" />
+
+            <org.mmtextview.components.MMTextView
+                android:id="@+id/tv_taste_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="@dimen/margin_medium_2"
+                android:lineSpacingMultiplier="1.3"
+                android:text="မနက်စာအဖြစ် သောက်လေ့ရှိသောအရည်တမျိုး  အီကြာကွေးနှင့် တွဲစားခြင်းသည် အလိုက်ဖက်ဆုံးဖြစ်"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_regular" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_image_container"
+            android:padding="@dimen/margin_medium">
+
+            <org.mmtextview.components.MMTextView
+                android:id="@+id/tv_wartee_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:fontFamily="@font/popping_regular"
+                android:text="လက်ဖက်ရည်"
+                android:textColor="@color/primaryText"
+                android:textSize="@dimen/text_regular_2x"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_max_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_wartee_name"
+                android:layout_marginBottom="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:fontFamily="@font/popping_regular"
+                android:shadowColor="@color/primaryText"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="2"
+                android:text="3500 KS"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/text_regular"
+                android:textStyle="bold" />
+
+            <org.mmtextview.components.MMTextView
+                android:id="@+id/tv_taste"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/tv_max_price"
+                android:layout_below="@+id/tv_wartee_name"
+                android:layout_marginLeft="@dimen/margin_large"
+                android:layout_toRightOf="@+id/tv_max_price"
+                android:fontFamily="@font/popping_medium"
+                android:lineSpacingMultiplier="1.3"
+                android:text="ပုံမှန်,ကျဆိမ့်"
+                android:textColor="@color/primaryText"
+                android:textSize="@dimen/text_regular" />
+
+            <TextView
+                android:id="@+id/tv_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="@dimen/margin_medium"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:background="@drawable/corner"
+                android:elevation="@dimen/margin_small"
+                android:text="3.8"
+                android:textColor="@android:color/white" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</android.support.v7.widget.CardView>

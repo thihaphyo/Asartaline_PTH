@@ -8,14 +8,9 @@ import java.util.List;
 /**
  * Created by Phyo Thiha on 7/3/18.
  */
-public class GetWarDeeResponse {
+public class GetWarDeeResponse extends BaseResponse {
 
-    @SerializedName("code")
-    private int code;
-    @SerializedName("message")
-    private String message;
-    @SerializedName("apiVersion")
-    private String apiVersion;
+
     @SerializedName("astlWarDee")
     private List<WarDeeVO> astlWarDee;
 
@@ -35,8 +30,9 @@ public class GetWarDeeResponse {
         return astlWarDee;
     }
 
+    @Override
     public boolean isResponseOK() {
-        
+
         return code == 200 && astlWarDee.size() > 0;
     }
 }

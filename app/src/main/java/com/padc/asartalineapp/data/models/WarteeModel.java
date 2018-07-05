@@ -48,6 +48,15 @@ public class WarteeModel {
 
     }
 
+    public void searchWarDeeList() {
+
+        mDataAgent.searchWarDee(ACCESS_TOKEN
+                , "ချဉ်ချဉ်စပ်စပ်", "အဆာပြေ"
+                , 2500, 3500
+                , true, "Tarmwae"
+                , "1.234567", "2.345678");
+    }
+
     public WarDeeVO getWarDeeById(String warDeeId) {
         return mDatarepo.get(warDeeId);
     }

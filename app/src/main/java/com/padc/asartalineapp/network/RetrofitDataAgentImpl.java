@@ -2,7 +2,9 @@ package com.padc.asartalineapp.network;
 
 import com.padc.asartalineapp.events.ApiErrorEvent;
 import com.padc.asartalineapp.events.SuccessGetWarDeeEvent;
+import com.padc.asartalineapp.events.SuccessSearchWarDeeEvent;
 import com.padc.asartalineapp.network.responses.GetWarDeeResponse;
+import com.padc.asartalineapp.network.responses.SearchWarDeeResponse;
 import com.padc.asartalineapp.utils.AppConstants;
 
 import org.greenrobot.eventbus.EventBus;
@@ -89,5 +91,51 @@ public class RetrofitDataAgentImpl implements AsarTalineDataAgent {
 
             }
         });
+    }
+
+    @Override
+    public void searchWarDee(String accessToken
+            , String tasteType, String suited
+            , int minPrice, int maxPrice
+            , boolean isNearBy, String currentTownship
+            , String currentLat, String currentLng) {
+
+        Call<SearchWarDeeResponse> searchWarDeeApiCall = mTheApi.searchWarDee(accessToken, tasteType
+                , suited, minPrice, maxPrice
+                , isNearBy, currentTownship
+                , currentLat, currentLng);
+
+        searchWarDeeApiCall.enqueue(new Callback<SearchWarDeeResponse>() {
+            @Override
+            public void onResponse(Call<SearchWarDeeResponse> call, Response<SearchWarDeeResponse> response) {
+                SearchWarDeeResponse searchWarDeeResponse = response.body();
+                if (searchWarDeeResponse != null && searchWarDeeResponse.isResponseOK()) {
+
+                    SuccessSearchWarDeeEvent event = new SuccessSearchWarDeeEvent(searchWarDeeResponse.getSearchResults()
+                            , searchWarDeeResponse.getMinPrice()
+                            , searchWarDeeResponse.getMaxPrice());
+                    EventBus.getDefault().post(event);
+                } else {
+                    if (searchWarDeeResponse == null) {
+
+                        ApiErrorEvent errorEvent = new ApiErrorEvent("Empty in Response!");
+                        EventBus.getDefault().post(errorEvent);
+
+                    } else {
+                        ApiErrorEvent errorEvent = new ApiErrorEvent(searchWarDeeResponse.getMessage());
+                        EventBus.getDefault().post(errorEvent);
+                    }
+                }
+            }
+
+            @Override
+            public void onFailure(Call<SearchWarDeeResponse> call, Throwable t) {
+
+                ApiErrorEvent errorEvent = new ApiErrorEvent(t.getMessage());
+                EventBus.getDefault().post(errorEvent);
+
+            }
+        });
+
     }
 }

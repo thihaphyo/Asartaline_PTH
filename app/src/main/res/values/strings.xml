@@ -3,4 +3,7 @@
     <string name="action_settings">Settings</string>
     <string name="format_price_range">Cost <xliff:g id="min">%d</xliff:g>KS - <xliff:g id="max">%d</xliff:g>KS for one.</string>
     <string name="format_price">KS-<xliff:g id="price">%d</xliff:g></string>
+    <string name="format_error"><xliff:g id="error">%s</xliff:g></string>
+    <string name="format_price_search">PRICE RANGE: <xliff:g id="min">%d</xliff:g> ~ <xliff:g id="max">%d</xliff:g></string>
+    <string name="format_price_search_count"><xliff:g id="min">%d</xliff:g> WARDEES FOUND! </string>
 </resources>

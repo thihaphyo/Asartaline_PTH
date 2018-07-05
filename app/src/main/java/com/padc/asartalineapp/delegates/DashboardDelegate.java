@@ -12,4 +12,5 @@ public interface DashboardDelegate {
     void onSearch(String query);
 
     void onTapCategory(String category);
+
 }
